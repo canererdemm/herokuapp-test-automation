@@ -17,6 +17,11 @@
   - Element silme
   - Çoklu element işlemleri
 
+- Basic Auth
+  - Başarılı giriş senaryosu
+  - Başarısız giriş senaryosu
+  - Giriş iptal senaryosu
+
 ## 💻 Kullanılan Teknolojiler
 - Playwright
 - ExcelJS (Test case yönetimi)
