@@ -28,24 +28,43 @@ test.describe('Basic Auth Tests', () => {
     });
 
     test('Başarısız giriş', async ({ page }) => {
-        // Yanlış bilgilerle giriş dene
-        await page.goto('https://wrong:wrong@the-internet.herokuapp.com/basic_auth');
-        
-        // 401 Unauthorized hatası almalıyız
-        const response = await page.waitForResponse(response => 
-            response.url().includes('/basic_auth') && 
-            response.status() === 401
-        );
-        expect(response.status()).toBe(401);
+        // Response'u yakalayacak listener ekle
+        let responseStatus = 0;
+        page.on('response', response => {
+            if (response.url().includes('/basic_auth')) {
+                responseStatus = response.status();
+            }
+        });
+
+        try {
+            // Yanlış bilgilerle giriş dene
+            await page.goto('https://wrong:wrong@the-internet.herokuapp.com/basic_auth', {
+                waitUntil: 'networkidle'
+            });
+        } catch (error) {
+            // 401 hatası beklediğimiz bir durum
+            console.log('Beklenen auth hatası alındı');
+        }
+
+        // Status 401 olmalı
+        expect(responseStatus).toBe(401);
     });
 
     test('Giriş iptali', async ({ page, context }) => {
         // Auth dialog'unu iptal etmek için event listener ekle
         context.on('dialog', dialog => dialog.dismiss());
         
-        // Normal URL ile git (auth bilgileri olmadan)
-        await page.goto('https://the-internet.herokuapp.com/basic_auth');
-        
+        try {
+            // Normal URL ile git (auth bilgileri olmadan)
+            await page.goto('https://the-internet.herokuapp.com/basic_auth', {
+                waitUntil: 'networkidle',
+                timeout: 5000 // Timeout'u düşür
+            });
+        } catch (error) {
+            // Timeout hatası beklediğimiz bir durum
+            console.log('Beklenen timeout hatası alındı');
+        }
+
         // Sayfanın yüklenmemesi gerekiyor
         const body = page.locator('body');
         await expect(body).not.toContainText('Congratulations');
