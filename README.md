@@ -1,30 +1,38 @@
-# Herokuapp Test Automation Project
+# herokuapp-test-automation
 
-Bu proje, [The Internet Herokuapp](https://the-internet.herokuapp.com/) web uygulamasının test otomasyonunu içermektedir.
+## 🚀 Test Edilen Sayfalar
 
-## 🚀 Teknolojiler & Araçlar
+### ✅ Tamamlanan Testler
+- Home Page
+  - Sayfa başlığı kontrolü
+  - Link kontrolleri
 
-### Test Araçları
+- A/B Testing
+  - Başlık kontrolü
+  - Metin içeriği kontrolü
+  - Elemental Selenium linki kontrolü
+
+- Add/Remove Elements
+  - Element ekleme
+  - Element silme
+  - Çoklu element işlemleri
+
+- Basic Auth
+  - Başarılı giriş senaryosu
+  - Başarısız giriş senaryosu
+  - Giriş iptal senaryosu
+
+- Broken Images
+  - Sayfa başlığı kontrolü
+  - Görsel durumu kontrolü
+  - Kırık görsel sayısı kontrolü
+
+- Challenging DOM
+  - Buton kontrolü ve etkileşimi
+  - Tablo veri doğrulaması
+  - Canvas element kontrolü
+
+## 💻 Kullanılan Teknolojiler
+- Playwright
+- ExcelJS (Test case yönetimi)
 - Node.js
-- Playwright (Web otomasyon aracı)
-
-### Proje Yönetimi & Test Yönetimi
-- Jira (Proje yönetimi)
-- Zephyr Scale (Test yönetimi)
-
-### Geliştirme Araçları
-- VS Code
-- Cursor AI (Kod geliştirme asistanı)
-- Git & GitHub (Versiyon kontrolü)
-
-## 📋 Test Edilen Özellikler
-
-1. Dosya İndirme
-   - Geçerli dosya indirme
-   - Geçersiz dosya kontrolü
-
-(Diğer özellikler eklendikçe güncellenecek)
-
-## 🛠️ Kurulum
-
-1. Repository'yi klonlayın: 
