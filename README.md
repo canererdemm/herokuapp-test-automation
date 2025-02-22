@@ -32,6 +32,11 @@
   - Tablo veri doğrulaması
   - Canvas element kontrolü
 
+- Checkboxes
+  - Başlangıç durumu kontrolü
+  - Tekli işaretleme/kaldırma
+  - Toplu işaretleme/kaldırma
+
 ## 💻 Kullanılan Teknolojiler
 - Playwright
 - ExcelJS (Test case yönetimi)
