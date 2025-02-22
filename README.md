@@ -22,6 +22,11 @@
   - Başarısız giriş senaryosu
   - Giriş iptal senaryosu
 
+- Broken Images
+  - Sayfa başlığı kontrolü
+  - Görsel durumu kontrolü
+  - Kırık görsel sayısı kontrolü
+
 ## 💻 Kullanılan Teknolojiler
 - Playwright
 - ExcelJS (Test case yönetimi)

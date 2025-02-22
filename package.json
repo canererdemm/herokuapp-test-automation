@@ -7,7 +7,8 @@
     "test:home": "npx playwright test tests/home-page.test.js",
     "test:ab": "npx playwright test tests/ab-testing.test.js",
     "test:add-remove": "npx playwright test tests/add-remove-elements.test.js",
-    "test:auth": "npx playwright test tests/basic-auth.test.js"
+    "test:auth": "npx playwright test tests/basic-auth.test.js",
+    "test:images": "npx playwright test tests/broken-images.test.js"
   },
   "devDependencies": {
     "@playwright/test": "^1.50.1"
