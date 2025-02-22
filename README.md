@@ -27,6 +27,11 @@
   - Görsel durumu kontrolü
   - Kırık görsel sayısı kontrolü
 
+- Challenging DOM
+  - Buton kontrolü ve etkileşimi
+  - Tablo veri doğrulaması
+  - Canvas element kontrolü
+
 ## 💻 Kullanılan Teknolojiler
 - Playwright
 - ExcelJS (Test case yönetimi)
